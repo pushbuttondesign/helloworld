@@ -12,4 +12,19 @@
 
 #global var
 
-print("hello world");
+#start debugging
+#pdb.set_trace()
+
+#
+# FUNCTION DESCRIPTION: main
+#
+# INPUTS: none
+# OUTPUTS: none
+#
+def main():
+	print("hello world");
+	return;
+
+#script autorun
+if __name__ == "__main__":
+    main();
