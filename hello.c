@@ -1,13 +1,16 @@
 //
-//PROGRAM TITLE: hello.c
-//PROGRAM DESCRIPTION: prints hello world & acts as c template
+// PROGRAM TITLE: hello.c
+// PROGRAM DESCRIPTION: prints hello world & acts as C template
 //
 
-//include & define
+// include
 #include <stdio.h>
 #include "hellolib.h"
 
-//global variables
+// define
+// macros
+// global variables
+// function declarations
 
 //
 // FUNCTION DESCRIPTION: main
@@ -20,3 +23,5 @@ int main()
     printf("\nhello world\n\n");
     return 0;
 }
+
+// functions
