@@ -1,13 +1,16 @@
-#!/usr/local/bin/python3
-# shebang for mac osx
-
 #!/usr/bin/env python3
 # shebang for linux
 
-#
-# PROGRAM TITLE: hello
-# PROGRAM DESCRIPTION: prints hello world & acts as python3 template
-#
+#!/usr/local/bin/python3
+# shebang for mac osx
+
+"""
+MODULE DESCRIPTION: prints hello world & acts as python3 template
+
+MODULE USAGE EXAMPLE:
+>>> main();
+hello world
+"""
 
 # import std lib
 # import 3rd party lib
@@ -17,17 +20,37 @@
 
 # start debugging
 #pdb.set_trace()
+DEBUG = 0;
 
-#
-# FUNCTION DESCRIPTION: main
-#
-# INPUTS: none
-# OUTPUTS: none
-#
 def main():
-	print("hello world");
-	return;
+    """
+    MODULE TITLE: main
+
+    MODULE DESCRIPTION: main
+
+    EXAMPLES:
+    >>> main();
+    hello world
+    """
+
+    try:
+        print("hello world");
+    except:
+        print("something went wrong");
+
+    if DEBUG == 1:
+        None;
+        return;
+
+    return;
 
 # script autorun
 if __name__ == "__main__":
+
+    # run program
     main();
+
+    # unit test
+    import doctest;
+    doctest.testmod();
+    
