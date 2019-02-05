@@ -5,11 +5,9 @@
 # shebang for mac osx
 
 """
-MODULE DESCRIPTION: prints hello world & acts as python3 template
+MODULE DESCRIPTION
 
-MODULE USAGE EXAMPLE:
->>> main();
-hello world
+MODULE FEATURES
 """
 
 # import std lib
@@ -19,38 +17,40 @@ hello world
 # global var
 
 # start debugging
+#import pdb
 #pdb.set_trace()
 DEBUG = 0;
 
-def main():
+def main(argv):
     """
-    MODULE TITLE: main
+    FUNCTION DESCRIPTION
 
-    MODULE DESCRIPTION: main
+    INPUTS
+    OUTPUTS
 
-    EXAMPLES:
+    EXAMPLES
     >>> main();
     hello world
     """
 
     try:
         print("hello world");
-    except:
-        print("something went wrong");
-
-    if DEBUG == 1:
-        None;
-        return;
+    except ValueError as err:
+        print("something went wrong: %s" % err, file=sys.stderr);
 
     return;
 
 # script autorun
 if __name__ == "__main__":
 
-    # run program
-    main();
+    #run program
+    try:
+        main(sys.argv);
+    except UserWarning as err:
+        print("%s" % err, file=sys.stderr);
+        exit(1);
 
-    # unit test
-    import doctest;
-    doctest.testmod();
-    
+    if DEBUG == 1:
+        # unit test
+        import doctest;
+        doctest.testmod();
