@@ -24,6 +24,7 @@ DEBUG = 0;
 def main(argv):
     """
     FUNCTION DESCRIPTION
+    OTHER COMMENTS
 
     INPUTS
     OUTPUTS
