@@ -11,6 +11,7 @@ MODULE FEATURES
 """
 
 # import std lib
+import sys
 # import 3rd party lib
 # import usr lib
 
